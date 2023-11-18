@@ -1,0 +1,42 @@
+0
+node02
+0
+Sat Nov 18 16:47:00 2023       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 530.30.02              Driver Version: 530.30.02    CUDA Version: 12.1     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                  Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf            Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce RTX 3090         On | 00000000:81:00.0 Off |                  N/A |
+| 38%   28C    P8               18W / 350W|      1MiB / 24576MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+Optimizing ./output/ilsh_00
+Output folder: ./output/ilsh_00 [18/11 16:47:11]
+Tensorboard not available: not logging progress [18/11 16:47:11]
+Found transforms_train.json file, assuming Blender data set! [18/11 16:47:11]
+Reading Training Transforms [18/11 16:47:11]
+Traceback (most recent call last):
+  File "../train.py", line 219, in <module>
+    training(lp.extract(args), op.extract(args), pp.extract(args), args.test_iterations, args.save_iterations, args.checkpoint_iterations, args.start_checkpoint, args.debug_from)
+  File "../train.py", line 35, in training
+    scene = Scene(dataset, gaussians)
+  File "/home/whwjdqls99/D3DGS/scene/__init__.py", line 47, in __init__
+    scene_info = sceneLoadTypeCallbacks["Blender"](args.source_path, args.white_background, args.eval)
+  File "/home/whwjdqls99/D3DGS/scene/dataset_readers.py", line 223, in readNerfSyntheticInfo
+    train_cam_infos = readCamerasFromTransforms(path, "transforms_train.json", white_background, extension)
+  File "/home/whwjdqls99/D3DGS/scene/dataset_readers.py", line 202, in readCamerasFromTransforms
+    image = Image.open(image_path)
+  File "/home/whwjdqls99/anaconda3/envs/gs/lib/python3.8/site-packages/PIL/Image.py", line 3243, in open
+    fp = builtins.open(filename, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/home/whwjdqls99/data/ILSH_toyex/000_00/./images/000_00_00.png'

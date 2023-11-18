@@ -1,0 +1,36 @@
+0
+node02
+0
+Sat Nov 18 17:10:15 2023       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 530.30.02              Driver Version: 530.30.02    CUDA Version: 12.1     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                  Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf            Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce RTX 3090         On | 00000000:A1:00.0 Off |                  N/A |
+| 37%   32C    P8               19W / 350W|      1MiB / 24576MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+Looking for config file in /home/whwjdqls99/D3DGS/bash/output/ilsh_00/cfg_args
+Config file found: /home/whwjdqls99/D3DGS/bash/output/ilsh_00/cfg_args
+Rendering /home/whwjdqls99/D3DGS/bash/output/ilsh_00
+Loading trained model at iteration 7000 [18/11 17:10:20]
+Found transforms_train.json file, assuming Blender data set! [18/11 17:10:20]
+Reading Training Transforms [18/11 17:10:20]
+Reading Test Transforms [18/11 17:10:39]
+Loading Training Cameras [18/11 17:10:41]
+[ INFO ] Encountered quite large input images (>1.6K pixels width), rescaling to 1.6K.
+ If this is not desired, please explicitly specify '--resolution/-r' as 1 [18/11 17:10:41]
+Loading Test Cameras [18/11 17:10:46]
+Rendering progress:   0%|          | 0/22 [00:00<?, ?it/s]Rendering progress:   5%|▍         | 1/22 [00:02<00:49,  2.33s/it]Rendering progress:   9%|▉         | 2/22 [00:04<00:47,  2.37s/it]Rendering progress:  14%|█▎        | 3/22 [00:07<00:46,  2.46s/it]Rendering progress:  18%|█▊        | 4/22 [00:09<00:45,  2.54s/it]Rendering progress:  23%|██▎       | 5/22 [00:12<00:43,  2.58s/it]Rendering progress:  27%|██▋       | 6/22 [00:14<00:39,  2.49s/it]Rendering progress:  32%|███▏      | 7/22 [00:17<00:35,  2.37s/it]Rendering progress:  36%|███▋      | 8/22 [00:19<00:33,  2.38s/it]Rendering progress:  41%|████      | 9/22 [00:21<00:31,  2.39s/it]Rendering progress:  45%|████▌     | 10/22 [00:24<00:29,  2.44s/it]Rendering progress:  50%|█████     | 11/22 [00:26<00:26,  2.42s/it]Rendering progress:  55%|█████▍    | 12/22 [00:29<00:24,  2.41s/it]Rendering progress:  59%|█████▉    | 13/22 [00:31<00:21,  2.43s/it]Rendering progress:  64%|██████▎   | 14/22 [00:34<00:19,  2.45s/it]Rendering progress:  68%|██████▊   | 15/22 [00:36<00:17,  2.48s/it]Rendering progress:  73%|███████▎  | 16/22 [00:39<00:14,  2.48s/it]Rendering progress:  77%|███████▋  | 17/22 [00:41<00:12,  2.52s/it]Rendering progress:  82%|████████▏ | 18/22 [00:44<00:10,  2.52s/it]Rendering progress:  86%|████████▋ | 19/22 [00:46<00:07,  2.50s/it]Rendering progress:  91%|█████████ | 20/22 [00:49<00:05,  2.52s/it]Rendering progress:  95%|█████████▌| 21/22 [00:51<00:02,  2.52s/it]Rendering progress: 100%|██████████| 22/22 [00:54<00:00,  2.53s/it]Rendering progress: 100%|██████████| 22/22 [00:54<00:00,  2.47s/it]
+Rendering progress:   0%|          | 0/2 [00:00<?, ?it/s]Rendering progress:  50%|█████     | 1/2 [00:02<00:02,  2.50s/it]Rendering progress: 100%|██████████| 2/2 [00:05<00:00,  2.58s/it]Rendering progress: 100%|██████████| 2/2 [00:05<00:00,  2.57s/it]
