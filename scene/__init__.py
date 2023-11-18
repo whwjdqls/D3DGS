@@ -17,6 +17,8 @@ from scene.dataset_readers import sceneLoadTypeCallbacks
 from scene.gaussian_model import GaussianModel
 from arguments import ModelParams
 from utils.camera_utils import cameraList_from_camInfos, camera_to_JSON
+from flame import FLAME, get_config
+
 
 class Scene:
 
@@ -45,9 +47,14 @@ class Scene:
         elif os.path.exists(os.path.join(args.source_path, "transforms_train.json")):
             print("Found transforms_train.json file, assuming Blender data set!")
             scene_info = sceneLoadTypeCallbacks["Blender"](args.source_path, args.white_background, args.eval)
+        elif os.path.exists(os.path.join(args.source_path, "yufeng")):
+            print("Found yufeng folder, assuming IMAvatar set!")
+            scene_info = sceneLoadTypeCallbacks["IMAvatar"](args.source_path, test_sample_rate = None, use_mean_expression = False)
         else:
             assert False, "Could not recognize scene type!"
-
+        # for coding
+        self.scene_info = scene_info
+        
         if not self.loaded_iter:
             with open(scene_info.ply_path, 'rb') as src_file, open(os.path.join(self.model_path, "input.ply") , 'wb') as dest_file:
                 dest_file.write(src_file.read())
@@ -75,6 +82,7 @@ class Scene:
             self.test_cameras[resolution_scale] = cameraList_from_camInfos(scene_info.test_cameras, resolution_scale, args)
 
         if self.loaded_iter:
+            # pretrained gaussian
             self.gaussians.load_ply(os.path.join(self.model_path,
                                                            "point_cloud",
                                                            "iteration_" + str(self.loaded_iter),

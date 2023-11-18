@@ -23,8 +23,8 @@ class Camera(nn.Module):
 
         self.uid = uid
         self.colmap_id = colmap_id
-        self.R = R
-        self.T = T
+        self.R = R # R 은, w2c에서의 R^-1
+        self.T = T # T 는 w2c에서의 t!
         self.FoVx = FoVx
         self.FoVy = FoVy
         self.image_name = image_name
